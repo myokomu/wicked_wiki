@@ -1,0 +1,25 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1><%= t!("engine.greeting") %></h1>
+    <p><%= t!("engine.welcome_message_2") %></p>
+
+    <p><a class="btn btn-primary btn-lg" role="button"><%= t!("engine.source_code_link") %> &raquo;</a></p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+      <% if user_authorized_to?('new') %>
+        <%= link_to t!("button.new_wiki"), new_wiki_path, class:"btn btn-primary btn-sm" %>
+      <% end %>      
+      <h3><%= t!("text.recent") %></h3>
+      <% @wikis.each do |wiki| %>
+        <div class="wiki-title">
+          <%= link_to wiki.title, wiki_path(wiki) %>
+        </div>
+        <br/>
+      <% end %>      
+    </div>
+  </div>
+</div>

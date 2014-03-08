@@ -1,0 +1,19 @@
+<div class="col-sm-8 col-sm-push-2 col-sm-pull-2  blog-main">
+  <div>
+      <%= link_to t!("button.show_all_revisions"), wiki_revisions_path(@wiki), class: "btn btn-warning" %>
+      <%= link_to t!("button.view_all_images"), wiki_images_path(@wiki), class: "btn btn-primary" %>
+      <% if user_authorized_to?('edit') %>
+        <%= link_to t!("button.edit"), edit_wiki_path(@wiki), class: "btn btn-primary" %>
+      <% end %>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <h1 class="blog-title"><%= @wiki.title %></h1>
+      <%= markdown (@wiki.content) %>
+      <div>
+        <%= protection_discription(@wiki.protection) %>
+      </div>
+    </div>
+  </div>
+</div>

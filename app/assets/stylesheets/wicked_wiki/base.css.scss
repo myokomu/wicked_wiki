@@ -1,0 +1,114 @@
+@import "bootstrap";
+
+ul, ol{
+  list-style: none;
+  padding: 0;
+}
+
+.no-lf-pad{
+  padding-left: 0;
+}
+
+.swt-lang-btns {
+  margin-top: 8px;
+  a{
+    margin-right: 7px;
+  }
+}
+
+.wiki_img{
+  float: right;
+  display: inline;
+  border: 1px solid #000000;
+}
+
+.wicked-search-form {
+  margin-top: 10px;
+
+  input{
+    height: 30px;
+  }
+
+  .wicked-search-btn {
+    padding-left: 1px;
+
+    button
+    {
+      height: 30px;
+      padding: 3px 12px;
+      border-radius: 7px;
+    }
+  }
+}
+
+.wiki-title{
+  font-size: 18px;
+}
+
+
+//diff
+.diff-table{
+  border-collapse: separate; 
+  border-spacing: 0 12px;
+  table-layout: fixed;
+  p{
+    margin: 0;
+  }
+}
+
+td{
+  height: 100%;
+}
+
+.line_num{
+  text-align:left;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.source_diff{
+  float: left;
+  width: 450px;
+}
+
+.target_diff{
+  float: right;
+  width: 450px;
+}
+
+.del{
+  background-color: #95a5a6;
+  font-weight: 500;
+}
+
+.add{
+  background-color: #70C0EE;
+  font-weight: 500;
+}
+
+.left_sec{
+  border: 2px #7f8c8d solid;
+  padding: 3px;
+  border-radius: 5px;
+  vertical-align: top;
+}
+
+.right_sec{
+  border: 2px #2980b9 solid;
+  border-radius: 5px;
+  padding: 3px;
+  vertical-align: top;
+
+}
+
+.diff_minus_sign{
+  text-align: right;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.diff_plus_sign{
+  font-size: 15px;
+  font-weight: bold;
+}
+//end diff

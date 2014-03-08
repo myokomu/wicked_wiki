@@ -1,0 +1,15 @@
+<div class="col-sm-8 col-sm-push-2 col-sm-pull-2  blog-main">
+  <div id="content_wrapper">
+    <%= form_tag({controller: 'diff', action: 'create'}, method: 'get') do %>
+      <%= submit_tag t!("button.compare") %>
+      <br/>
+      <% @revisions.each do |revision| %>
+        <%= radio_button_tag :target_id, revision.id, nil, class: "radio_target" %>
+        <%= radio_button_tag :source_id, revision.id, nil, class: "radio_source" %>
+        <%= link_to revision.created_at, wiki_revision_path(@wiki, revision), class: "revision_link" %>
+        by <%= revision.author_or_ip %>
+        <br/>
+      <% end %>
+    <% end %>
+  </div>
+</div>

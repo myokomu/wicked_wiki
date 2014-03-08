@@ -1,0 +1,1 @@
+WickedWiki::Engine.load_seed

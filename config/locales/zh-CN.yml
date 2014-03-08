@@ -1,0 +1,48 @@
+zh-CN:
+  wicked_wiki:
+    site:
+      name: 微壳维基
+
+    protection:
+      discription:
+        ###define your own discriptions here.
+        "no protection": Anyone will be able to edit this page.
+        "semi-protection": This page can be edited by signed in users.
+        "full protection": This page can only be edited by administrators
+        "creation protection": This page can only be edited by its creator or administrators.
+
+    general:
+      search: 搜索...
+      title: 标题
+
+    text:
+      recent: 最新更新的维基
+
+    button:
+      new_wiki: 创建新维基
+      show_all_revisions: 查看历史
+      view_all_images: 查看图片
+      edit: 编辑
+      compare: 对比
+
+    errors:
+      not_signed_in: "Please sign in"
+      messages:
+        already_confirmed: "was already confirmed, please try signing in"
+        confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
+        expired: "has expired, please request a new one"
+        not_found: "not found"
+        not_locked: "was not locked"
+        not_saved:
+          one: "1 error prohibited this %{resource} from being saved:"
+          other: "%{count} errors prohibited this %{resource} from being saved:"
+
+    engine: 
+      greeting: 哈啰！ 
+      search_wiki: 搜索维基...
+      source_code_link:  源代码链接
+      welcome_message_1:   如果你想要自己修改版面，请运行 rails generate wicked_wiki:views. 
+      welcome_message_2: 所有设定都可以在 config/initializers/wicked_wiki.rb 上面进行修改。
+
+
+

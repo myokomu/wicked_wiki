@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= t!("site.name")%></title>
+    <%= javascript_include_tag "wicked_wiki/application" %>
+    <%= stylesheet_link_tag    "wicked_wiki/base", media: "all" %>
+    <%= stylesheet_link_tag "syntax_hi.css" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= render 'layouts/wicked_wiki/header' %>
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>

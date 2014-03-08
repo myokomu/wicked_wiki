@@ -1,0 +1,47 @@
+en:
+  wicked_wiki:
+    site:
+      name: Wicked Wiki
+  
+    protection:
+      discription:
+        ###define your own discriptions here.
+        "no protection": Anyone will be able to edit this page.
+        "semi-protection": This page can be edited by signed in users.
+        "full protection": This page can only be edited by administrators
+        "creation protection": This page can only be edited by its creator or administrators.
+  
+    general:
+      search: search
+      title:  Title
+
+    text: 
+      recent: Recently updated Wikis 
+
+    button:
+      new_wiki: New Wiki
+      show_all_revisions: Show all revisions
+      view_all_images: View all images
+      edit: Edit
+      compare: Compare
+
+    errors:
+      not_signed_in: "Please sign in"
+      messages:
+        already_confirmed: "was already confirmed, please try signing in"
+        confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
+        expired: "has expired, please request a new one"
+        not_found: "not found"
+        not_locked: "was not locked"
+        not_saved:
+          one: "1 error prohibited this %{resource} from being saved:"
+          other: "%{count} errors prohibited this %{resource} from being saved:"
+  
+    engine:
+      greeting: Aloha!
+      search_wiki: search wiki
+      source_code_link: Source Code
+      #welcome_message_1: Wicked Wiki is a Rails 4 Wiki engine.
+      welcome_message_1: "If you want to customize the views, run rails generate wicked_wiki:views"
+      welcome_message_2: "All the configurations can be set in config/initializers/wicked_wiki.rb"
+

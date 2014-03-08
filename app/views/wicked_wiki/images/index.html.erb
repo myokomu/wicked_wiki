@@ -1,0 +1,12 @@
+<div class="col-sm-8 col-sm-push-2 col-sm-pull-2  blog-main">
+  <h1><%= @wiki.title %>: images</h1>
+  <%= link_to 'New Image', new_wiki_image_path, class: "btn btn-primary" %>
+  <br><br>
+  <% @images.each do |image| %>
+    <ul>
+      <li>
+        <%= image_tag image.file.url(:original) %>
+      </li>
+    </ul>
+  <% end %>
+</div>

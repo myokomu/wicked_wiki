@@ -1,0 +1,24 @@
+<div class="col-xs-12 col-xs-offset-0 col-md-10 col-md-push-1 col-md-pull-1">
+  <%= form_for @wiki do |f| %>  
+    <div class="form-group">   
+      <%= error_messages(@wiki) %>
+      <%= f.label t!("general.title") %>
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
+
+    <% if wicked_user? %>
+      <%= f.hidden_field :user_id, value: wicked_user.id %>
+    <% else %>
+      <%= f.hidden_field :ip, value: request.remote_ip %>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.text_area  :content, cols: 80, rows: 30, class: "form-control" %>
+      <%= render 'select_protections', f: f, wiki:@wiki %>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit "Create Wiki", class: "btn btn-primary btn-lg"%>
+    </div>
+  <% end %>
+</div>

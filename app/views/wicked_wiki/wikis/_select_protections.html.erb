@@ -1,0 +1,11 @@
+<% p = available_protections(@wiki) %>
+<% if p.size > 1 %>
+  <%= f.select :protection, p %>
+<% elsif p.size == 1 %>
+  <%= f.hidden_field :protection, value: first_element(p) %>
+  <div id="auto-selected-protection">
+    <%= protection_discription(p[0]) %>
+  </div>
+<% else %>
+  <%= no_matching_protection %>
+<% end %>

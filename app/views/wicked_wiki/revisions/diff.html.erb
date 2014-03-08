@@ -1,0 +1,25 @@
+<div class="col-sm-8 col-sm-push-2 col-sm-pull-2  blog-main">
+  <table class="diff-table">
+    <tbody>
+      <% @diff.each do |d| %>
+        <tr>
+          <td class="diff_minus_sign">-</td>
+          <td class="left_sec">
+            <div class="source_diff">
+              <%= render_diff(d[:del]) %>
+            </div>
+          </td>
+          <td class="diff_plus_sign">+</td>
+          <td class="right_sec">
+            <div class="target_diff">
+              <%= render_diff(d[:ins]) %>
+            </div>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+  <br/>
+  <%= markdown @target %>
+</div>

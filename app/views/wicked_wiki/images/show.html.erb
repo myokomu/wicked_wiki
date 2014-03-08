@@ -1,0 +1,10 @@
+<div class="col-sm-8 col-sm-push-2 col-sm-pull-2  blog-main">
+  <p>
+    <b>Name:</b>
+    <%= @image.name %>
+  </p>
+  
+  <%= image_tag @image.file.url(:original) %>
+  <%= link_to 'Back', wiki_images_path(@wiki), class: "btn btn-primary" %>
+  
+</div>

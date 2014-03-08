@@ -1,0 +1,33 @@
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to t!("site.name"), wikis_path, class:"navbar-brand" %>
+    </div>
+    <div class="navbar-collapse collapse">
+      <%= form_tag wikis_path, method: :get, class: "form-horizontal" do %>
+
+        <div class="wicked-search-form form-group col-md-6 col-sm-7 col-lg-8 no-lf-pad">
+          <div class="col-xs-10 col-lg-11">
+            <%= text_field_tag :query, params[:query], placeholder: t!("general.search"), class: "form-control" %>  
+          </div>
+          <div class="col-xs-2 col-md-1 wicked-search-btn">   
+            <%= submit_tag "GO", name: nil, class: "btn btn-primary" %>
+          </div>
+        </div>
+      <% end %>
+      <div class="swt-lang-btns col-sm-3 no-lf-pad">
+        <%= link_to "English", { locale:'en' }, class: "btn btn-success" %>
+        <%= link_to "中文", { locale: 'zh-CN' }, class: "btn btn-info" %>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>

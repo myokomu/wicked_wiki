@@ -1,0 +1,15 @@
+<div class="col-sm-8 col-sm-push-2 col-sm-pull-2  blog-main">
+  <div id="content_wrapper">
+    <div id="entry_wrapper">
+      <div id="entry_title">
+        <div><%= @revision.title %></div>
+      </div>
+      <br/>
+      <div id="entry_body">
+        <%= markdown (@revision.content) %>
+        <%= time_ago_in_words @revision.created_at %>
+        ago
+      </div>
+    </div>
+  </div>
+</div>
