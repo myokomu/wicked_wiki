@@ -3,7 +3,7 @@
 Wicked Wiki is wicked Rails 4 wiki engine. The gem is still in development, but you can certainly play with it now!
 
 ##Quick Start##
-In your work directory:
+In your working directory:
 
 ```shell
 git clone https://github.com/myokomu/wicked_wiki.git

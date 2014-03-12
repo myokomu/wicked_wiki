@@ -33,10 +33,14 @@ module WickedWiki
         ip
       end
     end
-    
+
     def save_and_create_revision
       self.save
       Revision.create(self)
+    rescue SystemCallError => e
+      raise "): It seems like you either don't elasticsearch booted up 
+             or you don't have it installed. You can find instructions 
+             for installing elasticsearch here: https://github.com/karmi/retire"
     end
   end
 end
